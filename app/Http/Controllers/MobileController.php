@@ -17,15 +17,5 @@ class MobileController extends Controller
             'password'=>'required',
         ]);
 
-        $user = User::create([
-            'first_name' => $fields['first_name'],
-            'last_name' => $fields['last_name'],
-            'email' => $fields ['email'],
-            'phone_number' => $fields ['phone_number'],
-            'country' => $fields ['country'],
-            'password' => bcrypt($fields['password']),
-        ]);
-        $token = $user->createToken('myapptoken')->plainTextToken;
-
 }
 }
